@@ -4,4 +4,6 @@ from django.views.generic.base import View
 class BasePage(View):
     
     def get(self, request):
-        return render(request, 'base.html')
+        context = {'name': 'John'}
+
+        return render(request, 'base.html', context)
