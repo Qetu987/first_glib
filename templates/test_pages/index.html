@@ -7,5 +7,20 @@
         <p>{{ name }}</p>
     </div>
 
+    <div style="width:1080px; display: flex; gap:20px; margin: auto; margin-top: 40px;">
+        
+        {% for current_task in tasks %}
+            <div style="width: 200px; box-shadow: 0 0 0 1px red; padding: 8px;">
+                <h3>{{ current_task.title }}</h3>
+                <div style="display: flex; gap: 4px;">
+                    <p>{{ current_task.created_at|date:"M d, Y" }}</p>
+                    <p>-</p>
+                    <p>{{ current_task.due_date|date:"M d, Y" }}</p>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+
 {% endblock %}
     

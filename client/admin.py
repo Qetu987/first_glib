@@ -55,5 +55,6 @@ class CustomUserAdmin(UserAdmin):
 class TaskAdmin(admin.ModelAdmin):
     list_display = ('id', 'title', 'due_date', 'completed_at', 'created_at', 'updated_at')
     search_fields = ('id', 'title')
+    list_display_links = ('id','title')
     list_filter = ('due_date', 'completed_at', 'created_at', 'updated_at')
     ordering = ('-due_date',)
